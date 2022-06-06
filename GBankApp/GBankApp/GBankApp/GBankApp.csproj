@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA3AE1D6-105A-4655-B4A7-C87D67F5049A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GBankApp</RootNamespace>
+    <AssemblyName>GBankApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Resources\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSummary.Designer.cs">
+      <DependentUpon>AccountSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackGroundRates.cs" />
+    <Compile Include="Cryptology.cs" />
+    <Compile Include="ExchangeRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExchangeRates.Designer.cs">
+      <DependentUpon>ExchangeRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgottenPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgottenPass.Designer.cs">
+      <DependentUpon>ForgottenPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoicePayment.Designer.cs">
+      <DependentUpon>InvoicePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loans.Designer.cs">
+      <DependentUpon>Loans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailSender.cs" />
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount.Designer.cs">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyLoans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLoans.Designer.cs">
+      <DependentUpon>MyLoans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrivacyPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.Designer.cs">
+      <DependentUpon>PrivacyPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpPage.Designer.cs">
+      <DependentUpon>SignUpPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountSummary.resx">
+      <DependentUpon>AccountSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExchangeRates.resx">
+      <DependentUpon>ExchangeRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgottenPass.resx">
+      <DependentUpon>ForgottenPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoicePayment.resx">
+      <DependentUpon>InvoicePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loans.resx">
+      <DependentUpon>Loans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount.resx">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyLoans.resx">
+      <DependentUpon>MyLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivacyPolicy.resx">
+      <DependentUpon>PrivacyPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpPage.resx">
+      <DependentUpon>SignUpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginPage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignUpPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnBackButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyPageWithLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DolarIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EuroIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PoundIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtomLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnBackButtpn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RowBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalanceT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyAccBckgrnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyAccTemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignupPageDesign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoansPanelDesign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedColumBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoanBackpayment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoansPanelDesignHoriz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyLoansStatus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\sign-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\signnup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\log-in %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\signup11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\signup12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\log-in %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\completed-task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pound-sterling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\euro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\euro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pound-sterling1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loan %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picsart_22-06-01_17-00-09-070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picsart_22-06-01_17-04-47-991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kareback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picsart_22-06-01_17-00-09-070 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
